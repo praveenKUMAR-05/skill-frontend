@@ -24,7 +24,7 @@ function SkillsPage() {
   // 🔹 Fetch Skills with Authentication
   const fetchSkills = async () => {
     try {
-      const response = await fetch("https://skill-backend-fawn.vercel.app/api/skills", {
+      const response = await fetch("http://localhost:5000/api/skills", {
         headers: { Authorization: `Bearer ${token}` }, // Include Token
       });
       if (!response.ok) throw new Error("Failed to fetch skills");
