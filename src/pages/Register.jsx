@@ -61,7 +61,7 @@ function Register() {
     setIsLoading(true);
     
     try {
-      const response = await axios.post("https://skill-backend-fawn.vercel.app/api/register", {
+      const response = await axios.post("http://localhost:5000/api/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password
