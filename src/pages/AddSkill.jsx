@@ -32,7 +32,7 @@ function AddSkill() {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/api/add-skill", {
+      const response = await fetch("https://skill-backend-b3n9.onrender.com/api/add-skill", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newSkill),
