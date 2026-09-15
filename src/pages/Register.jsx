@@ -61,7 +61,7 @@ function Register() {
     setIsLoading(true);
     
     try {
-      const response = await axios.post("http://localhost:5000/api/register", {
+      const response = await axios.post("https://skill-backend-b3n9.onrender.com/api/register", {
         name: formData.name,
         email: formData.email,
         password: formData.password
