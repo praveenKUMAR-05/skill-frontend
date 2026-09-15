@@ -24,7 +24,7 @@ function SkillsPage() {
   // 🔹 Fetch Skills with Authentication
   const fetchSkills = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/skills", {
+      const response = await fetch("https://skill-backend-b3n9.onrender.com/api/skills", {
         headers: { Authorization: `Bearer ${token}` }, // Include Token
       });
       if (!response.ok) throw new Error("Failed to fetch skills");
@@ -51,8 +51,8 @@ function SkillsPage() {
     e.preventDefault();
     const method = formData.id ? "PUT" : "POST";
     const url = formData.id
-      ? `http://localhost:5000/api/update-skill/${formData.id}`
-      : "http://localhost:5000/api/add-skill";
+      ? `https://skill-backend-b3n9.onrender.com/api/update-skill/${formData.id}`
+      : "https://skill-backend-b3n9.onrender.com/api/add-skill";
 
     try {
       const response = await fetch(url, {
@@ -80,7 +80,7 @@ function SkillsPage() {
     if (!window.confirm("Are you sure you want to delete this skill?")) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/delete-skill/${id}`, { 
+      const response = await fetch(`https://skill-backend-b3n9.onrender.com/api/delete-skill/${id}`, { 
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` }, // Include Token
       });
