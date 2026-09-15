@@ -19,7 +19,7 @@ function Login() {
     setError("");
 
     try {
-      const response = await ffetch("https://skill-backend-b3n9.onrender.com/api/login", {
+      const response = await fetch("https://skill-backend-b3n9.onrender.com/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
